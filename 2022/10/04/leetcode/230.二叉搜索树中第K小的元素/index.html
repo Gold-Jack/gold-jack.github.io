@@ -20,17 +20,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"gold-jack.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="230.二叉搜索树中第K小的元素题目描述230. 二叉搜索树中第K小的元素难度中等675收藏分享切换为英文接收动态反馈 给定一个二叉搜索树的根节点 root ，和一个整数 k ，请你设计一个算法查找其中第 k 个最小元素（从 1 开始计数）。 示例 1：  12输入：root &#x3D; [3,1,4,null,2], k &#x3D; 1输出：1  示例 2：  12输入：root &#x3D; [5,3,6,2,4,nu">
+    <meta name="description" content="230.二叉搜索树中第K小的元素(Mid)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="230.二叉搜索树中第K小的元素">
 <meta property="og:url" content="https://gold-jack.github.io/2022/10/04/leetcode/230.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/index.html">
 <meta property="og:site_name" content="Jack&#39;s Blog">
-<meta property="og:description" content="230.二叉搜索树中第K小的元素题目描述230. 二叉搜索树中第K小的元素难度中等675收藏分享切换为英文接收动态反馈 给定一个二叉搜索树的根节点 root ，和一个整数 k ，请你设计一个算法查找其中第 k 个最小元素（从 1 开始计数）。 示例 1：  12输入：root &#x3D; [3,1,4,null,2], k &#x3D; 1输出：1  示例 2：  12输入：root &#x3D; [5,3,6,2,4,nu">
+<meta property="og:description" content="230.二叉搜索树中第K小的元素(Mid)">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://assets.leetcode.com/uploads/2021/01/28/kthtree1.jpg">
 <meta property="og:image" content="https://assets.leetcode.com/uploads/2021/01/28/kthtree2.jpg">
 <meta property="article:published_time" content="2022-10-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-10-04T10:45:56.894Z">
+<meta property="article:modified_time" content="2022-10-04T10:51:47.145Z">
 <meta property="article:author" content="Gold_Jack">
 <meta property="article:tag" content="recursion">
 <meta property="article:tag" content="BST">
@@ -200,7 +200,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="230.二叉搜索树中第K小的元素 | Jack's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="230.二叉搜索树中第K小的元素(Mid)">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -216,7 +216,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-10-04 00:00:00 / 修改时间：18:45:56" itemprop="dateCreated datePublished" datetime="2022-10-04T00:00:00+08:00">2022-10-04</time>
+      <time title="创建时间：2022-10-04 00:00:00 / 修改时间：18:51:47" itemprop="dateCreated datePublished" datetime="2022-10-04T00:00:00+08:00">2022-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -238,6 +238,7 @@
     </span>
 </div>
 
+            <div class="post-description">230.二叉搜索树中第K小的元素(Mid)</div>
         </div>
       </header>
 
@@ -283,11 +284,14 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/10/04/leetcode/235.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" rel="prev" title="235.二叉搜索树的最近公共祖先">
-                  <i class="fa fa-chevron-left"></i> 235.二叉搜索树的最近公共祖先
+                <a href="/2022/10/04/leetcode/538.%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%B4%AF%E5%8A%A0%E6%A0%91/" rel="prev" title="538.把二叉搜索树转换为累加树">
+                  <i class="fa fa-chevron-left"></i> 538.把二叉搜索树转换为累加树
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2022/10/04/leetcode/235.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" rel="next" title="235.二叉搜索树的最近公共祖先">
+                  235.二叉搜索树的最近公共祖先 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -363,7 +367,7 @@ darkmode.showWidget();
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Gold-Jack","repo":"hexo-gitalk-comments","client_id":"5ac0eefff2b116be641e","client_secret":"336d27febb3f405acd38cd83c22cb840ec95b5b9","admin_user":"Gold-Jack","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"f8de17546b39a31483786e1ae607ab34"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Gold-Jack","repo":"hexo-gitalk-comments","client_id":"5ac0eefff2b116be641e","client_secret":"336d27febb3f405acd38cd83c22cb840ec95b5b9","admin_user":"Gold-Jack","distraction_free_mode":true,"proxy":["https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"],"language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"f8de17546b39a31483786e1ae607ab34"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
