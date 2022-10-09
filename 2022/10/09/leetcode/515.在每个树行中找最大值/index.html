@@ -20,28 +20,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"gold-jack.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="vue3项目创建和版本匹配">
+    <meta name="description" content="515.在每个树行中找最大值(Mid)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue3">
-<meta property="og:url" content="https://gold-jack.github.io/2022/09/28/notes/Vue/index.html">
+<meta property="og:title" content="515.在每个树行中找最大值">
+<meta property="og:url" content="https://gold-jack.github.io/2022/10/09/leetcode/515.%E5%9C%A8%E6%AF%8F%E4%B8%AA%E6%A0%91%E8%A1%8C%E4%B8%AD%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC/index.html">
 <meta property="og:site_name" content="Jack&#39;s Blog">
-<meta property="og:description" content="vue3项目创建和版本匹配">
+<meta property="og:description" content="515.在每个树行中找最大值(Mid)">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-09-28T09:47:33.549Z">
+<meta property="og:image" content="https://gold-jack.github.io/typora-user-images/largest_e1.jpg">
+<meta property="article:published_time" content="2022-10-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-10-09T03:50:40.651Z">
 <meta property="article:author" content="Gold_Jack">
-<meta property="article:tag" content="springboot-vue">
+<meta property="article:tag" content="tree">
+<meta property="article:tag" content="recursion">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gold-jack.github.io/typora-user-images/largest_e1.jpg">
 
 
-<link rel="canonical" href="https://gold-jack.github.io/2022/09/28/notes/Vue/">
+<link rel="canonical" href="https://gold-jack.github.io/2022/10/09/leetcode/515.%E5%9C%A8%E6%AF%8F%E4%B8%AA%E6%A0%91%E8%A1%8C%E4%B8%AD%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://gold-jack.github.io/2022/09/28/notes/Vue/","path":"2022/09/28/notes/Vue/","title":"Vue3"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://gold-jack.github.io/2022/10/09/leetcode/515.%E5%9C%A8%E6%AF%8F%E4%B8%AA%E6%A0%91%E8%A1%8C%E4%B8%AD%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC/","path":"2022/10/09/leetcode/515.在每个树行中找最大值/","title":"515.在每个树行中找最大值"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Vue3 | Jack's Blog</title>
+<title>515.在每个树行中找最大值 | Jack's Blog</title>
   
 
 
@@ -118,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue3"><span class="nav-number">1.</span> <span class="nav-text">Vue3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAVue%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.1.</span> <span class="nav-text">创建Vue项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-sass-%E7%89%88%E6%9C%AC%E5%AF%B9%E5%BA%94%E8%A1%A8"><span class="nav-number">1.2.</span> <span class="nav-text">Node-sass 版本对应表</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#515-%E5%9C%A8%E6%AF%8F%E4%B8%AA%E6%A0%91%E8%A1%8C%E4%B8%AD%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC"><span class="nav-number">1.</span> <span class="nav-text">515. 在每个树行中找最大值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java"><span class="nav-number">1.0.1.</span> <span class="nav-text">Java</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -181,7 +184,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gold-jack.github.io/2022/09/28/notes/Vue/">
+    <link itemprop="mainEntityOfPage" href="https://gold-jack.github.io/2022/10/09/leetcode/515.%E5%9C%A8%E6%AF%8F%E4%B8%AA%E6%A0%91%E8%A1%8C%E4%B8%AD%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -194,12 +197,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Vue3 | Jack's Blog">
-      <meta itemprop="description" content="vue3项目创建和版本匹配">
+      <meta itemprop="name" content="515.在每个树行中找最大值 | Jack's Blog">
+      <meta itemprop="description" content="515.在每个树行中找最大值(Mid)">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Vue3
+          515.在每个树行中找最大值
         </h1>
 
         <div class="post-meta-container">
@@ -211,7 +214,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-09-28 00:00:00 / 修改时间：17:47:33" itemprop="dateCreated datePublished" datetime="2022-09-28T00:00:00+08:00">2022-09-28</time>
+      <time title="创建时间：2022-10-09 00:00:00 / 修改时间：11:50:40" itemprop="dateCreated datePublished" datetime="2022-10-09T00:00:00+08:00">2022-10-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -219,12 +222,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/notes/" itemprop="url" rel="index"><span itemprop="name">notes</span></a>
+          <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
         </span>
     </span>
 
   
-    <span id="/2022/09/28/notes/Vue/" class="post-meta-item leancloud_visitors" data-flag-title="Vue3" title="阅读次数">
+    <span id="/2022/10/09/leetcode/515.%E5%9C%A8%E6%AF%8F%E4%B8%AA%E6%A0%91%E8%A1%8C%E4%B8%AD%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC/" class="post-meta-item leancloud_visitors" data-flag-title="515.在每个树行中找最大值" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -233,7 +236,7 @@
     </span>
 </div>
 
-            <div class="post-description">vue3项目创建和版本匹配</div>
+            <div class="post-description">515.在每个树行中找最大值(Mid)</div>
         </div>
       </header>
 
@@ -241,95 +244,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Vue3"><a href="#Vue3" class="headerlink" title="Vue3"></a>Vue3</h1><h2 id="创建Vue项目"><a href="#创建Vue项目" class="headerlink" title="创建Vue项目"></a>创建Vue项目</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化项目</span></span><br><span class="line">E:\IDEA<span class="literal">-Workspace</span>\vue<span class="literal">-projects</span>&gt;vue init webpack vue<span class="literal">-element-ui</span></span><br><span class="line">? Project name vue<span class="literal">-element-ui</span></span><br><span class="line">? Project description A Vue.js project</span><br><span class="line">? Author jack &lt;gold_jack@<span class="number">163</span>.com&gt;</span><br><span class="line">? Vue build standalone</span><br><span class="line">? Install vue<span class="literal">-router</span>? No		<span class="comment"># 以下选NO是为了手动体验安装过程</span></span><br><span class="line">? Use ESLint to lint your code? No</span><br><span class="line">? <span class="built_in">Set</span> up unit tests No</span><br><span class="line">? Setup e2e tests with Nightwatch? No</span><br><span class="line">? Should we run `npm install` <span class="keyword">for</span> you after the project has been created? (recommended) no</span><br><span class="line"></span><br><span class="line">   vue<span class="literal">-cli</span> · Generated <span class="string">&quot;vue-element-ui&quot;</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># Project initialization finished!</span></span><br><span class="line"><span class="comment"># ========================</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入项目目录</span></span><br><span class="line"><span class="built_in">cd</span> &lt;PROJECT_NAME&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装vue-router</span></span><br><span class="line">cnpm install vue<span class="literal">-router</span>@<span class="number">3.1</span>.<span class="number">3</span> <span class="literal">--save-dev</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装element-ui库</span></span><br><span class="line">cnpm i element<span class="literal">-ui</span> <span class="literal">-S</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装node_modules</span></span><br><span class="line">cnpm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装sass-loader和node-sass</span></span><br><span class="line">cnpm install sass<span class="literal">-loader</span> node<span class="literal">-sass</span> <span class="literal">--save-dev</span></span><br><span class="line">cnpm install sass<span class="literal">-loader</span>@<span class="number">7.3</span>.<span class="number">1</span> node<span class="literal">-sass</span>@<span class="number">4.14</span>.<span class="number">1</span> <span class="literal">--save-dev</span>	<span class="comment"># 如果nodejs是Node14版本</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h1 id="515-在每个树行中找最大值"><a href="#515-在每个树行中找最大值" class="headerlink" title="515. 在每个树行中找最大值"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-largest-value-in-each-tree-row/">515. 在每个树行中找最大值</a></h1><p>难度中等278收藏分享切换为英文接收动态反馈</p>
+<p>给定一棵二叉树的根节点 <code>root</code> ，请找出该二叉树中每一层的最大值。</p>
+<p><strong>示例1：</strong></p>
+<p><img src="/typora-user-images/largest_e1.jpg" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: root = [1,3,2,5,3,null,9]</span><br><span class="line">输出: [1,3,9]</span><br></pre></td></tr></table></figure>
 
-<h2 id="Node-sass-版本对应表"><a href="#Node-sass-版本对应表" class="headerlink" title="Node-sass 版本对应表"></a>Node-sass 版本对应表</h2><table>
-<thead>
-<tr>
-<th>NodeJS</th>
-<th>Supported node-sass version</th>
-<th>Node Module</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Node 17</td>
-<td>7.0+</td>
-<td>102</td>
-</tr>
-<tr>
-<td>Node 16</td>
-<td>6.0+</td>
-<td>93</td>
-</tr>
-<tr>
-<td>Node 15</td>
-<td>5.0+, &lt;7.0</td>
-<td>88</td>
-</tr>
-<tr>
-<td>Node 14</td>
-<td>4.14+</td>
-<td>83</td>
-</tr>
-<tr>
-<td>Node 13</td>
-<td>4.13+, &lt;5.0</td>
-<td>79</td>
-</tr>
-<tr>
-<td>Node 12</td>
-<td>4.12+</td>
-<td>72</td>
-</tr>
-<tr>
-<td>Node 11</td>
-<td>4.10+, &lt;5.0</td>
-<td>67</td>
-</tr>
-<tr>
-<td>Node 10</td>
-<td>4.9+, &lt;6.0</td>
-<td>64</td>
-</tr>
-<tr>
-<td>Node 8</td>
-<td>4.5.3+, &lt;5.0</td>
-<td>57</td>
-</tr>
-<tr>
-<td>Node &lt;8</td>
-<td>&lt;5.0</td>
-<td>&lt;57</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>node-sass版本</th>
-<th>sass-loader版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>4.3.0</td>
-<td>4.1.1</td>
-</tr>
-<tr>
-<td>4.7.2</td>
-<td>7.0.3</td>
-</tr>
-<tr>
-<td>4.7.2</td>
-<td>7.3.1</td>
-</tr>
-<tr>
-<td>4.14.1</td>
-<td>7.3.1</td>
-</tr>
-<tr>
-<td>6.0.1</td>
-<td>10.0.1</td>
-</tr>
-</tbody></table>
+<p><strong>示例2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: root = [1,2,3]</span><br><span class="line">输出: [1,3]</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>二叉树的节点个数的范围是 <code>[0,104]</code></li>
+<li><code>-231 &lt;= Node.val &lt;= 231 - 1</code></li>
+</ul>
+<h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// key: depth, value: max</span></span><br><span class="line">    HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">largestValues</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        traverse(root, <span class="number">0</span>);</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(map.values());</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">traverse</span><span class="params">(TreeNode node, <span class="type">int</span> depth)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (node == <span class="literal">null</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span> (node.val &gt;= map.getOrDefault(depth, Integer.MIN_VALUE))</span><br><span class="line">            map.put(depth, node.val);</span><br><span class="line">        traverse(node.left, depth + <span class="number">1</span>);</span><br><span class="line">        traverse(node.right, depth + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -339,18 +269,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/springboot-vue/" rel="tag"># springboot-vue</a>
+              <a href="/tags/tree/" rel="tag"># tree</a>
+              <a href="/tags/recursion/" rel="tag"># recursion</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2022/10/08/leetcode/129.%E6%B1%82%E6%A0%B9%E8%8A%82%E7%82%B9%E5%88%B0%E5%8F%B6%E8%8A%82%E7%82%B9%E6%95%B0%E5%AD%97%E4%B9%8B%E5%92%8C/" rel="prev" title="129.求根节点到叶节点数字之和">
+                  <i class="fa fa-chevron-left"></i> 129.求根节点到叶节点数字之和
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/09/28/notes/Swagger2/" rel="next" title="Swagger2">
-                  Swagger2 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -426,7 +357,7 @@ darkmode.showWidget();
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Gold-Jack","repo":"hexo-gitalk-comments","client_id":"5ac0eefff2b116be641e","client_secret":"336d27febb3f405acd38cd83c22cb840ec95b5b9","admin_user":"Gold-Jack","distraction_free_mode":true,"proxy":"http://pigass.cn/proxy/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"3f492fa3f4c9da08bbe18443474a3a04"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Gold-Jack","repo":"hexo-gitalk-comments","client_id":"5ac0eefff2b116be641e","client_secret":"336d27febb3f405acd38cd83c22cb840ec95b5b9","admin_user":"Gold-Jack","distraction_free_mode":true,"proxy":"http://pigass.cn/proxy/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"a61ee072ad1d7df4153cb225e0d069d9"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
