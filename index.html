@@ -125,7 +125,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -165,6 +165,94 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://gold-jack.github.io/2022/10/14/notes/AI%E4%BD%9C%E7%94%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gold_Jack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jack's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Jack's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/14/notes/AI%E4%BD%9C%E7%94%BB/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-10-14 15:26:31 / 修改时间：15:56:26" itemprop="dateCreated datePublished" datetime="2022-10-14T15:26:31+08:00">2022-10-14</time>
+    </span>
+
+  
+    <span id="/2022/10/14/notes/AI%E4%BD%9C%E7%94%BB/" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="AI作画相关资料"><a href="#AI作画相关资料" class="headerlink" title="AI作画相关资料"></a>AI作画相关资料</h1><p><strong>带星号的是可能找到模型结构（开源）的</strong></p>
+<h2 id="stable-diffusion-amp-disco-diffusion"><a href="#stable-diffusion-amp-disco-diffusion" class="headerlink" title="stable diffusion &amp; disco diffusion"></a>stable diffusion &amp; disco diffusion</h2><p>有webui，也有命令行，但没找到开源的代码（指模型的神经网络结构），目前确定的是，可以调整输入、输出图片的各项参数，采样步数，来取得不同的结果。</p>
+<h2 id="GANArtf"><a href="#GANArtf" class="headerlink" title="*GANArtf"></a>*GANArtf</h2><p>生成肖像画，用StyleGAN2 ADA进行训练（不知道这个算不算是开源模型了）</p>
+<p>github：<a target="_blank" rel="noopener" href="https://github.com/DeewakarChakraborty/GANArt-Using-AI-to-create-Portraits">https://github.com/DeewakarChakraborty/GANArt-Using-AI-to-create-Portraits</a></p>
+<p>在<strong>GANArt-TransferLearning.ipynb</strong>中貌似找到了网络结构的输出</p>
+<p><img src="/typora-user-images/image-20221014154633813.png" alt="image-20221014154633813"></p>
+<h2 id="GANscapes"><a href="#GANscapes" class="headerlink" title="GANscapes"></a>GANscapes</h2><p>使用GAN生成印象画作，粗读了代码，没有找到具体的网络结构，但是可调参数比diffusion多。github的issue里有人表示，colab挂了，可能要在本地跑。</p>
+<p>github：<a target="_blank" rel="noopener" href="https://github.com/robgon-art/GANscapes">https://github.com/robgon-art/GANscapes</a></p>
+<p>文章：<a target="_blank" rel="noopener" href="https://towardsdatascience.com/ganscapes-using-ai-to-create-new-impressionist-paintings-d6af1cf94c56">GANscapes: Using AI to Create New Impressionist Paintings</a></p>
+<h2 id="Style-transfer-AI-painting"><a href="#Style-transfer-AI-painting" class="headerlink" title="*Style-transfer-AI-painting"></a>*Style-transfer-AI-painting</h2><p>风格迁移的模型——AI绘画大师</p>
+<p>github:<a target="_blank" rel="noopener" href="https://github.com/stonehard0208/Style-transfer-AI-painting">https://github.com/stonehard0208/Style-transfer-AI-painting</a></p>
+<p>主要参考文献：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1508.06576%EF%BC%88%E6%9C%89%E4%BB%A3%E7%A0%81%EF%BC%8C%E8%BF%98%E6%B2%A1%E4%B8%8B%E8%BD%BD%E4%B8%8B%E6%9D%A5%E7%9C%8B%EF%BC%89">https://arxiv.org/abs/1508.06576（有代码，还没下载下来看）</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -538,101 +626,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://gold-jack.github.io/2022/10/08/leetcode/114.%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%95%E5%BC%80%E4%B8%BA%E9%93%BE%E8%A1%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gold_Jack">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jack's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Jack's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/08/leetcode/114.%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%95%E5%BC%80%E4%B8%BA%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">114.二叉树展开为链表</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-10-08 00:00:00 / 修改时间：17:36:53" itemprop="dateCreated datePublished" datetime="2022-10-08T00:00:00+08:00">2022-10-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/2022/10/08/leetcode/114.%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%95%E5%BC%80%E4%B8%BA%E9%93%BE%E8%A1%A8/" class="post-meta-item leancloud_visitors" data-flag-title="114.二叉树展开为链表" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>114.二叉树展开为链表(Mid)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/10/08/leetcode/114.%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%95%E5%BC%80%E4%B8%BA%E9%93%BE%E8%A1%A8/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
