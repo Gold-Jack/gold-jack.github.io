@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"gold-jack.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="AI作画、音频处理平台相关资料">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI作画 &amp; 音频处理平台">
+<meta property="og:url" content="https://gold-jack.github.io/2022/10/20/notes/AI%E4%BD%9C%E7%94%BB/index.html">
+<meta property="og:site_name" content="Jack&#39;s Blog">
+<meta property="og:description" content="AI作画、音频处理平台相关资料">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-10-20T12:15:19.284Z">
+<meta property="article:author" content="Gold_Jack">
+<meta property="article:tag" content="ai_painting">
+<meta property="article:tag" content="diffusion model">
+<meta property="article:tag" content="textual inversion">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://gold-jack.github.io/2022/10/20/notes/AI%E4%BD%9C%E7%94%BB/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://gold-jack.github.io/2022/10/20/notes/AI%E4%BD%9C%E7%94%BB/","path":"2022/10/20/notes/AI作画/","title":"AI作画 & 音频处理平台"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>AI作画 & 音频处理平台 | Jack's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Jack's Blog" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Jack's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AI%E4%BD%9C%E7%94%BB"><span class="nav-number">1.</span> <span class="nav-text">AI作画</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TODO%E3%80%81%E9%9C%80%E6%B1%82"><span class="nav-number">1.1.</span> <span class="nav-text">TODO、需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E9%9A%8F%E8%AE%B0%EF%BC%88%E4%B8%8D%E7%94%A8%E7%9C%8B%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">一些随记（不用看）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#stable-diffusion-amp-disco-diffusion"><span class="nav-number">1.2.1.</span> <span class="nav-text">*stable diffusion &amp; *disco diffusion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GANArt"><span class="nav-number">1.2.2.</span> <span class="nav-text">*GANArt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GANscapes"><span class="nav-number">1.2.3.</span> <span class="nav-text">GANscapes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Style-transfer-AI-painting"><span class="nav-number">1.2.4.</span> <span class="nav-text">*Style-transfer-AI-painting</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Disco-Diffusion"><span class="nav-number">1.3.</span> <span class="nav-text">Disco Diffusion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hugging-face"><span class="nav-number">1.4.</span> <span class="nav-text">Hugging face</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stable-Diffusion"><span class="nav-number">1.5.</span> <span class="nav-text">Stable Diffusion</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%EF%BC%88windows%EF%BC%89"><span class="nav-number">1.5.1.</span> <span class="nav-text">部署（windows）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C"><span class="nav-number">1.5.2.</span> <span class="nav-text">运行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dreambooth"><span class="nav-number">1.6.</span> <span class="nav-text">Dreambooth</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83"><span class="nav-number">1.6.1.</span> <span class="nav-text">模型训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8dreambooth%E5%8A%A0%E9%80%9F"><span class="nav-number">1.6.2.</span> <span class="nav-text">使用dreambooth加速</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Gold_Jack</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gold-jack.github.io/2022/10/20/notes/AI%E4%BD%9C%E7%94%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gold_Jack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jack's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="AI作画 & 音频处理平台 | Jack's Blog">
+      <meta itemprop="description" content="AI作画、音频处理平台相关资料">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          AI作画 & 音频处理平台
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-10-20 00:00:00 / 修改时间：20:15:19" itemprop="dateCreated datePublished" datetime="2022-10-20T00:00:00+08:00">2022-10-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/notes/" itemprop="url" rel="index"><span itemprop="name">notes</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2022/10/20/notes/AI%E4%BD%9C%E7%94%BB/" class="post-meta-item leancloud_visitors" data-flag-title="AI作画 & 音频处理平台" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+            <div class="post-description">AI作画、音频处理平台相关资料</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="AI作画"><a href="#AI作画" class="headerlink" title="AI作画"></a>AI作画</h1><h2 id="TODO、需求"><a href="#TODO、需求" class="headerlink" title="TODO、需求"></a>TODO、需求</h2><ul>
+<li><p>用户登陆、交互界面（类似于stable-duffision-webui、DiffusionBee）</p>
+</li>
+<li><p>批量上传、下载图片</p>
+</li>
+<li><p>用户通过stable diffusion的txt2img和img2img生成自己想要的图片</p>
+</li>
+<li><p>用户指定关键词（class），上传20张左右reference-image，系统使用dreambooth训练<strong>（目前卡在deepspeed加速器下载）</strong>，形成用户自己的textual-Inversion模型，可以在prompt中使用，得到特定的class图片（参考：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1TT411P7qq/?spm_id_from=333.337.search-card.all.click&amp;vd_source=ac1b24359a7d27b63248ae1c80f2ba6c%EF%BC%89">https://www.bilibili.com/video/BV1TT411P7qq/?spm_id_from=333.337.search-card.all.click&amp;vd_source=ac1b24359a7d27b63248ae1c80f2ba6c）</a></p>
+</li>
+<li><p>改变prompt中的整体性关键词，系统通过自动调参，使图像产生明显趋向用户想法的变化。如：把”an oak tree on the fields in  summer”中的summer换成winter，系统会自动把茂密的绿叶换成叶子掉光的树枝。（参考：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1b24y197H1/?spm_id_from=333.788&amp;vd_source=ac1b24359a7d27b63248ae1c80f2ba6c%EF%BC%89">https://www.bilibili.com/video/BV1b24y197H1/?spm_id_from=333.788&amp;vd_source=ac1b24359a7d27b63248ae1c80f2ba6c）</a></p>
+</li>
+<li><p>改变prompt中的局部性关键词，系统能使用某种方法<strong>（目前没有思路）</strong>，系统重新生成图片的时间明显缩短。</p>
+</li>
+<li><p>多平台（web-&gt;安卓-&gt;IOS）</p>
+</li>
+</ul>
+<h2 id="一些随记（不用看）"><a href="#一些随记（不用看）" class="headerlink" title="一些随记（不用看）"></a>一些随记（不用看）</h2><p>AI作画是图象增加噪点的逆过程，细节缺乏的图片也可以认为是带噪点的图片，对缺乏的细节进行补充也是降噪的过程。这个部分其实这些模型都可以通过添加关键字然后基于init_image进行降噪，我们主要要做的事是：1. 让模型专注于这个精化需求的过程，提高从底图到增加细节的新图的速度 2. 设计出一个比较好的交互逻辑，提高精化需求的效率</p>
+<p><strong>带星号的是可能找到模型结构（开源）的</strong></p>
+<h3 id="stable-diffusion-amp-disco-diffusion"><a href="#stable-diffusion-amp-disco-diffusion" class="headerlink" title="*stable diffusion &amp; *disco diffusion"></a>*stable diffusion &amp; *disco diffusion</h3><p>有webui，也有命令行，但没找到开源的代码（指模型的神经网络结构），目前确定的是，可以调整输入、输出图片的各项参数，采样步数，来取得不同的结果。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/alembics/disco-diffusion">https://github.com/alembics/disco-diffusion</a><br><a target="_blank" rel="noopener" href="https://github.com/CompVis/stable-diffusion">https://github.com/CompVis/stable-diffusion</a></p>
+<h3 id="GANArt"><a href="#GANArt" class="headerlink" title="*GANArt"></a>*GANArt</h3><p>生成肖像画，用StyleGAN2 ADA进行训练（不知道这个算不算是开源模型了）</p>
+<p>github：<a target="_blank" rel="noopener" href="https://github.com/DeewakarChakraborty/GANArt-Using-AI-to-create-Portraits">https://github.com/DeewakarChakraborty/GANArt-Using-AI-to-create-Portraits</a></p>
+<p>在<strong>GANArt-TransferLearning.ipynb</strong>中貌似找到了网络结构的输出</p>
+<h3 id="GANscapes"><a href="#GANscapes" class="headerlink" title="GANscapes"></a>GANscapes</h3><p>使用GAN生成印象画作，粗读了代码，没有找到具体的网络结构，但是可调参数比diffusion多。github的issue里有人表示，colab挂了，可能要在本地跑。</p>
+<p>github：<a target="_blank" rel="noopener" href="https://github.com/robgon-art/GANscapes">https://github.com/robgon-art/GANscapes</a></p>
+<p>文章：<a target="_blank" rel="noopener" href="https://towardsdatascience.com/ganscapes-using-ai-to-create-new-impressionist-paintings-d6af1cf94c56">GANscapes: Using AI to Create New Impressionist Paintings</a></p>
+<h3 id="Style-transfer-AI-painting"><a href="#Style-transfer-AI-painting" class="headerlink" title="*Style-transfer-AI-painting"></a>*Style-transfer-AI-painting</h3><p>风格迁移的模型——AI绘画大师</p>
+<p>github:<a target="_blank" rel="noopener" href="https://github.com/stonehard0208/Style-transfer-AI-painting">https://github.com/stonehard0208/Style-transfer-AI-painting</a></p>
+<p>主要参考文献：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1508.06576%EF%BC%88%E6%9C%89%E4%BB%A3%E7%A0%81%EF%BC%8C%E8%BF%98%E6%B2%A1%E4%B8%8B%E8%BD%BD%E4%B8%8B%E6%9D%A5%E7%9C%8B%EF%BC%89">https://arxiv.org/abs/1508.06576（有代码，还没下载下来看）</a></p>
+<h2 id="Disco-Diffusion"><a href="#Disco-Diffusion" class="headerlink" title="Disco Diffusion"></a>Disco Diffusion</h2><p>官网：<a target="_blank" rel="noopener" href="https://github.com/alembics/disco-diffusion">https://github.com/alembics/disco-diffusion</a></p>
+<p>colab：</p>
+<h2 id="Hugging-face"><a href="#Hugging-face" class="headerlink" title="Hugging face"></a>Hugging face</h2><p>模型下载网站：<a target="_blank" rel="noopener" href="https://huggingface.co/models">https://huggingface.co/models</a></p>
+<h2 id="Stable-Diffusion"><a href="#Stable-Diffusion" class="headerlink" title="Stable Diffusion"></a>Stable Diffusion</h2><p>官网：<a target="_blank" rel="noopener" href="https://github.com/CompVis/stable-diffusion">https://github.com/CompVis/stable-diffusion</a></p>
+<h3 id="部署（windows）"><a href="#部署（windows）" class="headerlink" title="部署（windows）"></a>部署（windows）</h3><blockquote>
+<p>*运行conda命令时，请关闭代理，运行pip时，可以开启代理加速</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda env create -f environment.yaml</span><br><span class="line">conda activate ldm</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">必要依赖包</span></span><br><span class="line">pip install einops==0.3.0 torch-fidelity==0.3.0 transformers==4.19.2 torchmetrics==0.6.0 kornia==0.6 opencv-python-headless imgaug==0.2.6</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pip install albumentations==0.4.3 diffusers opencv-python==4.1.2.30 pudb==2019.2 invisible-watermark imageio==2.9.0 imageio-ffmpeg==0.4.2 pytorch-lightning==1.4.2 omegaconf==2.1.1 test-tube&gt;=0.7.5 streamlit&gt;=0.73.1 </span><br><span class="line"></span><br><span class="line">pip install -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers </span><br><span class="line">pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip </span><br><span class="line">pip install -e .</span><br></pre></td></tr></table></figure>
+
+<p>如果上述过程中有报错，可以忽略。<strong>numpy包如果版本不对，可以删除后指定版本重新安装，即可避免报错。</strong></p>
+<blockquote>
+<p>*如果需要更新torch环境，可以运行以下代码</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch torchvision -c pytorch</span><br><span class="line">pip install transformers==4.19.2 diffusers invisible-watermark</span><br><span class="line">pip install -e .</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>numpy版本问题</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip uninstall numpy	# 可多次运行，一定要保证numpy的各个版本被全部卸载干净</span><br><span class="line">pip install numpy==1.23</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>官方运行模板</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python scripts/txt2img.py --prompt &quot;a photograph of an astronaut riding a horse&quot; --plms </span><br></pre></td></tr></table></figure>
+
+<p>常用参数</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">--prompt # 图片的描述</span><br><span class="line">--W, --H # 图片的宽高，默认512*512，3080 10G只能一次训练一张。512*256可以一次训练6张</span><br><span class="line">--n_samples # 一次的样本数，默认为2</span><br><span class="line">--plms # plms采样方法</span><br><span class="line">--ddim_steps # ddim采样步数，默认50，采用ddim采样</span><br><span class="line">--n_iter # 最后生成的图片数量</span><br></pre></td></tr></table></figure>
+
+<p>其他的参数及详情，见<code>scripts\txt2img.py</code></p>
+<p>生成涂鸦风的公主肖像</p>
+<blockquote>
+<p>plms sampling</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\scripts\txt2img.py --prompt &quot;an graffiti of a portrait of princess&quot; --plms --n_samples 1 --n_iter 10 --outdir .\outputs\oil-painting --W 512 --H 512</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>ddim sampling</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\scripts\txt2img.py --prompt &quot;an graffiti of a portrait of princess&quot; --ddim_eta 0.0 --ddim_steps 100 --n_samples 1 --n_iter 10 --outdir .\outputs\oil-painting --W 512 --H 512</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Dreambooth"><a href="#Dreambooth" class="headerlink" title="Dreambooth"></a>Dreambooth</h2><p>根据训练图，训练自己的模型</p>
+<p>教程中要求3090 24G算力，本机不够：<a target="_blank" rel="noopener" href="https://github.com/gammagec/Dreambooth-SD-optimized">https://github.com/gammagec/Dreambooth-SD-optimized</a></p>
+<p>deepspeed优化显存至8GB：<a target="_blank" rel="noopener" href="https://github.com/ShivamShrirao/diffusers/tree/main/examples/dreambooth">https://github.com/ShivamShrirao/diffusers/tree/main/examples/dreambooth</a></p>
+<h3 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\main.py --base .\configs\stable-diffusion\v1 -finetune_unfrozen.yaml -t --actual_resume .\models\ldm\stable-diffusion-v1\sd-v1-4-full-ema.ckpt -n train-starcraft1 --gpus &quot;0,&quot; --data_root .\samples\starcraft1-ref\ --reg_data_root .\samples\starcraft1-train\ --class_word starcraft1</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="使用dreambooth加速"><a href="#使用dreambooth加速" class="headerlink" title="使用dreambooth加速"></a>使用dreambooth加速</h3><blockquote>
+<p>首先下载diffusers</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install diffusers</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>加速器配置</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">accelerate config</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em>可以使用deepspeed减少显存*<em>（出错）</em></em></p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install deepspeed</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用加速器训练</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">accelerate launch train_dreambooth.py \</span><br><span class="line">  --pretrained_model_name_or_path=sd-v1-4-full-ema.ckpt \</span><br><span class="line">  --instance_data_dir=samples/starcraft1-train \</span><br><span class="line">  --class_data_dir=samples/starcraft1-ref \</span><br><span class="line">  --output_dir=outputs \</span><br><span class="line">  --with_prior_preservation --prior_loss_weight=1.0 \</span><br><span class="line">  --instance_prompt=&quot;a photo of starcraft1&quot; \</span><br><span class="line">  --class_prompt=&quot;starcraft1&quot; \</span><br><span class="line">  --resolution=512 \</span><br><span class="line">  --train_batch_size=1 \</span><br><span class="line">  --gradient_accumulation_steps=1 --gradient_checkpointing \</span><br><span class="line">  --learning_rate=5e-6 \</span><br><span class="line">  --lr_scheduler=&quot;constant&quot; \</span><br><span class="line">  --lr_warmup_steps=0 \</span><br><span class="line">  --num_class_images=200 \</span><br><span class="line">  --max_train_steps=800 \</span><br><span class="line">  --mixed_precision=fp16</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">accelerate launch train_dreambooth.py --pretrained_model_name_or_path=sd-v1-4-full-ema.ckpt --instance_data_dir=samples/starcraft1-train --class_data_dir=samples/starcraft1-ref --output_dir=outputs --with_prior_preservation --prior_loss_weight=1.0 --instance_prompt=&quot;a photo of starcraft1&quot; --class_prompt=&quot;starcraft1&quot; --resolution=512 --train_batch_size=1 --gradient_accumulation_steps=1 --gradient_checkpointing --learning_rate=5e-6 --lr_scheduler=&quot;constant&quot; --lr_warmup_steps=0 --num_class_images=200 --max_train_steps=800 --mixed_precision=fp16</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ai-painting/" rel="tag"># ai_painting</a>
+              <a href="/tags/diffusion-model/" rel="tag"># diffusion model</a>
+              <a href="/tags/textual-inversion/" rel="tag"># textual inversion</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/10/15/leetcode/%E3%80%8A%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E3%80%8B(DP)/" rel="prev" title="《买卖股票》(DP)">
+                  <i class="fa fa-chevron-left"></i> 《买卖股票》(DP)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Gold_Jack</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"ZuxMbPORrgeaVv5XqzOV6utJ-gzGzoHsz","app_key":"I1vYT2AZk16Ha4lTZhpUNehC","server_url":null,"security":false}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '32px',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Gold-Jack","repo":"hexo-gitalk-comments","client_id":"5ac0eefff2b116be641e","client_secret":"336d27febb3f405acd38cd83c22cb840ec95b5b9","admin_user":"Gold-Jack","distraction_free_mode":true,"proxy":"http://pigass.cn/proxy/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"94816880ca503d3338331296bca3b677"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
